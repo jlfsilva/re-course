@@ -1,4 +1,4 @@
-package com.example.workshopmongo;
+package com.kaspper.coursejpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
