@@ -1,5 +1,9 @@
 package com.kaspper.coursejpa.repositories;
 
-public class UserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.kaspper.coursejpa.entities.User;
+
+public interface UserRepository extends JpaRepository<User, Long> {
 
 }
