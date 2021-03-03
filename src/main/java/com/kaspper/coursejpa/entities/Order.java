@@ -33,7 +33,6 @@ public class Order implements Serializable {
 	private User client;
 
 	public Order() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Order(Long id, Instant moment, OrderStatus orderStatus, User client) {
