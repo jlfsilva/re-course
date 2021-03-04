@@ -8,6 +8,7 @@ import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.kaspper.coursejpa.entities.Category;
@@ -41,6 +42,8 @@ public class CategoryService {
 			repository.deleteById(id);
 		}catch(DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
+		}catch(EmptyResultDataAccessException e) {
+			throw new ResourceNotFoundException(id);
 		}
 	}
 	
